@@ -47,7 +47,18 @@ AI Reading 不要求用户先上传整本书。以下信息可以组合提供：
 
 ## 安装
 
-### Codex 用户级安装
+### 推荐：使用 `$skill-installer` 安装
+
+在 Codex 中直接粘贴下面这段提示：
+
+```text
+使用 $skill-installer 从以下地址安装 AI Reading Skill：
+https://github.com/yanz86808-beep/ai-reading-skill/tree/main/skills/ai-reading
+```
+
+安装器会从公开仓库下载 `skills/ai-reading`，并放入当前 Codex 环境配置的 Skill 目录。安装成功后，新开一轮对话并输入 `$ai-reading`。在 Codex CLI 或 IDE 扩展中也可以运行 `/skills` 检查是否出现；如果没有立即刷新，请重启 Codex。
+
+### 手动安装到用户目录
 
 克隆或下载本仓库后，将 [`skills/ai-reading`](skills/ai-reading) 复制到 Codex 用户级 Skill 目录：
 
@@ -56,9 +67,7 @@ mkdir -p ~/.agents/skills
 cp -R skills/ai-reading ~/.agents/skills/ai-reading
 ```
 
-也可以让 `$skill-installer` 从发布后的 GitHub 仓库安装。安装器会使用当前 Codex 配置的用户 Skill 目录；部分环境使用 `$CODEX_HOME/skills`，默认通常是 `~/.codex/skills`。
-
-安装后可在新一轮对话中输入 `$ai-reading`。在 Codex CLI 或 IDE 扩展中也可以运行 `/skills` 检查是否出现。如果没有立即刷新，请重启 Codex。
+只复制 `skills/ai-reading`，不要把仓库根目录整体当作 Skill。部分环境使用 `$CODEX_HOME/skills`，默认通常是 `~/.codex/skills`；使用 `$skill-installer` 时会自动选择当前配置目录。
 
 ### 仓库级使用
 

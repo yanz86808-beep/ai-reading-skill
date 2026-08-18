@@ -49,7 +49,18 @@ The workflow pauses only when the book or goal cannot be identified, or no relia
 
 ## Installation
 
-### User-level Codex installation
+### Recommended: install with `$skill-installer`
+
+Open Codex and paste this prompt:
+
+```text
+Use $skill-installer to install the AI Reading Skill from:
+https://github.com/yanz86808-beep/ai-reading-skill/tree/main/skills/ai-reading
+```
+
+The installer downloads the public `skills/ai-reading` directory into the skill directory configured by the current Codex environment. After it reports success, start a new conversation and invoke `$ai-reading`. In Codex CLI or the IDE extension, run `/skills` to confirm discovery. Restart Codex if the skill list has not refreshed.
+
+### Manual user-level installation
 
 Clone or download this repository, then copy [`skills/ai-reading`](skills/ai-reading) into the user-level skill directory:
 
@@ -58,9 +69,7 @@ mkdir -p ~/.agents/skills
 cp -R skills/ai-reading ~/.agents/skills/ai-reading
 ```
 
-You can also ask `$skill-installer` to install the skill from the published GitHub repository. The installer uses the skill directory configured by the current Codex environment; some environments use `$CODEX_HOME/skills`, commonly `~/.codex/skills`.
-
-Start a new conversation and invoke `$ai-reading`. In Codex CLI or the IDE extension, run `/skills` to confirm discovery. Restart Codex if the skill list has not refreshed.
+Only copy the `skills/ai-reading` directory, not the repository root. Some environments use `$CODEX_HOME/skills`, commonly `~/.codex/skills`; `$skill-installer` selects the configured location automatically.
 
 ### Repository-level installation
 
