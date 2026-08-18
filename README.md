@@ -1,4 +1,4 @@
-# AI Reading: Understand Books Faster, Think Deeper, Put Ideas to Work
+# AI Reading Skill for OpenAI Codex and ChatGPT: Understand Books Faster, Think Deeper, Put Ideas to Work
 
 English | [简体中文](README.zh-CN.md)
 
@@ -6,9 +6,11 @@ English | [简体中文](README.zh-CN.md)
 [![Release](https://img.shields.io/github/v/release/yanz86808-beep/ai-reading-skill)](https://github.com/yanz86808-beep/ai-reading-skill/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+**Open-source AI book analysis · Feynman learning · Critical reading · Context-aware application**
+
 Reading a book can stretch across days or weeks—not only because of the pages, but because it takes time to find what matters, untangle difficult concepts, question convincing claims, and decide what any of it means in real life.
 
-**AI Reading** is a deep-reading Skill for Codex and ChatGPT. It helps you focus on the right questions, explain ideas in your own words, examine claims from multiple angles, and turn useful insights into decisions, actions, or content.
+**AI Reading** is an open-source AI reading and book-analysis Skill for OpenAI Codex and ChatGPT. It helps you focus on the right questions, explain ideas in your own words, examine claims from multiple angles, and turn useful insights into decisions, actions, or content.
 
 > A typical AI helps you get a summary faster. AI Reading helps you reach your own understanding and judgment faster.
 

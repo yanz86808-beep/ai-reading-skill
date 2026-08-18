@@ -6,9 +6,11 @@
 [![Release](https://img.shields.io/github/v/release/yanz86808-beep/ai-reading-skill)](https://github.com/yanz86808-beep/ai-reading-skill/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+**面向 OpenAI Codex 与 ChatGPT 的开源 AI 深度阅读 Skill · 费曼学习 · 多角度辨析 · 情境化应用**
+
 读一本书，真正耗时的往往不只是翻页，而是找不到重点、概念似懂非懂、观点照单全收，读完以后仍然不知道怎么用。
 
-**AI Reading** 是一个面向 Codex 和 ChatGPT 的深度阅读 Skill。它帮你快速找到真正值得追踪的问题，把复杂概念讲清楚，从多个角度辨析观点，再结合你的角色、目标和现实限制，把有价值的部分转化成行动和表达。
+**AI Reading** 是一个面向 OpenAI Codex 和 ChatGPT 的开源 AI 阅读与书籍分析 Skill。它帮你快速找到真正值得追踪的问题，把复杂概念讲清楚，从多个角度辨析观点，再结合你的角色、目标和现实限制，把有价值的部分转化成行动和表达。
 
 > 普通 AI 帮你更快得到一份摘要。AI Reading 帮你更快形成自己的理解和判断。
 
