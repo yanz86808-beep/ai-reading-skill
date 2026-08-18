@@ -1,0 +1,16 @@
+.DS_Store
+.env
+.env.*
+*.log
+*.tmp
+*.zip
+
+# Local development and internal review artifacts
+/runs/
+/reviews/
+
+# Editor and runtime artifacts
+.idea/
+.vscode/
+__pycache__/
+*.py[cod]
