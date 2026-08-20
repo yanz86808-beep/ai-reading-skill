@@ -1,4 +1,4 @@
 interface:
   display_name: "AI Reading"
-  short_description: "先讲透全书总框架，再用详细案例与可信审计展开"
-  default_prompt: "Use $ai-reading to explain a book through its complete frameworks and detailed cases, then challenge and apply it."
+  short_description: "先讲透全书总框架，再用书型适配证据与可信审计展开"
+  default_prompt: "Use $ai-reading to explain a book through its complete framework and type-appropriate evidence, then challenge and apply it."

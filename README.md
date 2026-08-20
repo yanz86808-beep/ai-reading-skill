@@ -41,7 +41,7 @@ Instead of treating every chapter and idea as equally important, AI Reading star
 
 ### Explain the book fully, then audit it
 
-When you simply ask it to read a book, AI Reading first treats the book-wide master framework as the first core knowledge point: what problem the book solves, which modules make up its answer, and how those modules interact and feed back into one another. It then unfolds three to five core modules attached to that framework. Each module states its role in the whole and explains one representative book case through its context, process, result, and lesson. It then adds three counterintuitive cases, a practical toolbox, three immediate actions, and one concise real-world application. Evidence strength, outdated claims, and unverified details are consolidated in a closing audit instead of interrupting the reading itself.
+When you simply ask it to read a book, AI Reading first treats the book-wide master framework as the first core knowledge point: what problem the book solves, which modules make up its answer, and how those modules interact and feed back into one another. It then unfolds three to five core modules attached to that framework and uses evidence appropriate to the book type: complete cases for practical books, key scenes and textual evidence for literature, argument chains for philosophy, event and source chains for history, and study design plus current consensus for science. The report ends with matching understanding aids, a pressure test, and an appropriate next step instead of forcing every book into a business action plan. Evidence strength, outdated claims, and unverified details are consolidated in a closing audit.
 
 ### Build your own judgment
 
@@ -67,6 +67,8 @@ Find the question → Explain it clearly → Examine it from multiple angles →
 The stages work as one continuous journey, but each can also run independently. Ask for stage 2, 3, or 4 directly; AI Reading will establish only the minimum reliable foundation needed instead of forcing you to restart from stage 1.
 
 If you simply say “read this book,” the default is one complete report. If you say “guide me step by step” or “start with stage 1,” it switches to an interactive journey and waits for your own answer during Feynman learning.
+
+If you explicitly ask to test or automatically run all four stages, AI Reading enters evaluation mode. It uses clearly labeled fixture answers to test correction and state continuity without presenting them as your answers or claiming that you learned the concepts.
 
 ## Why it saves time
 
@@ -117,6 +119,10 @@ Turn what I have learned into a 45-minute training outline for my team.
 Use only ideas that have already been clarified and examined.
 ```
 
+```text
+Automatically test $ai-reading across practical, literary, scientific, and philosophical books. Run all four stages with labeled fixtures without waiting for my answers.
+```
+
 See [`examples/prompts.md`](examples/prompts.md) for more prompts, [`evals/ai-reading/test-cases.md`](evals/ai-reading/test-cases.md) for public acceptance scenarios, and the [`report quality rubric`](evals/ai-reading/report-quality-rubric.md) for complete-report evaluation.
 
 ## Good fit
@@ -154,10 +160,11 @@ The absence of pasted book text is not itself a blocker. The workflow pauses onl
 <details>
 <summary><strong>Output modes and stage completion rules</strong></summary>
 
-- **Complete report mode (default for broad requests)**: provide a book-wide master framework as the first core knowledge point, three to five attached core modules with detailed book cases, three counterintuitive cases, a toolbox, three actions, a Feynman self-test, pressure test, credibility audit, and one concise real-world application.
+- **Complete report mode (default for broad requests)**: provide a book-wide master framework as the first core knowledge point, three to five attached core modules, type-appropriate supporting evidence, key tensions or misconceptions, understanding aids, a Feynman self-test, pressure test, credibility audit, and an appropriate next step.
 - **Guided mode**: proceed stage by stage when the user explicitly asks for guidance, and wait for the reader's answer during Feynman learning.
 - **Single-stage mode**: run the requested stage directly and establish only its minimum reliable foundation.
 - **Focused report mode**: answer a specified question with research, self-test material, multi-angle examination, and asset recommendations while marking interactions that have not occurred.
+- **Evaluation mode**: when explicitly requested, run all four stages with labeled fixture answers and verify book switching, skipped or revisited stages, and claim-version continuity. Fixtures never count as reader mastery.
 - **Length levels**: concise usually uses up to three core frameworks; standard uses three to five; deep adds disputes, counterexamples, and source comparison.
 
 For stage 3, simple methods usually use two perspectives, causal or generalized claims use three, and high-risk claims affecting individuals, organizations, institutions, and ethics use four. The perspectives must be meaningfully different rather than renamed versions of the same objection.
