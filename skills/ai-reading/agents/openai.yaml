@@ -1,4 +1,4 @@
 interface:
   display_name: "AI Reading"
-  short_description: "核验书籍来源并转化为理解、判断、行动与多渠道内容资产"
-  default_prompt: "Use $ai-reading to help me verify, understand, challenge, and apply the ideas from a book."
+  short_description: "先讲透全书总框架，再用详细案例与可信审计展开"
+  default_prompt: "Use $ai-reading to explain a book through its complete frameworks and detailed cases, then challenge and apply it."

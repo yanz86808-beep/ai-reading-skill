@@ -28,8 +28,7 @@ https://github.com/yanz86808-beep/ai-reading-skill/tree/main/skills/ai-reading
 After installation, start a new conversation:
 
 ```text
-Use $ai-reading to read Thinking, Fast and Slow.
-I want to reduce cognitive bias in hiring decisions. Start with stage 1.
+Use $ai-reading to read Thinking, Fast and Slow. Explain its full structure, core ideas, disputes, and real-world applications in one report.
 ```
 
 No API key or additional runtime dependency is required. The host may need web-search permission when current facts or external evidence must be verified.
@@ -40,6 +39,10 @@ No API key or additional runtime dependency is required. The host may need web-s
 
 Instead of treating every chapter and idea as equally important, AI Reading starts from your goal and identifies the concepts, claims, and questions most worth pursuing.
 
+### Explain the book fully, then audit it
+
+When you simply ask it to read a book, AI Reading first treats the book-wide master framework as the first core knowledge point: what problem the book solves, which modules make up its answer, and how those modules interact and feed back into one another. It then unfolds three to five core modules attached to that framework. Each module states its role in the whole and explains one representative book case through its context, process, result, and lesson. It then adds three counterintuitive cases, a practical toolbox, three immediate actions, and one concise real-world application. Evidence strength, outdated claims, and unverified details are consolidated in a closing audit instead of interrupting the reading itself.
+
 ### Build your own judgment
 
 It asks you to explain difficult ideas in plain language, corrects gaps, and examines claims from multiple independent angles. The goal is not to attack the author, but to understand why an idea works, when it works, and where it may fail.
@@ -48,7 +51,7 @@ It asks you to explain difficult ideas in plain language, corrects gaps, and exa
 
 The same idea can mean very different things to a manager, teacher, recruiter, creator, or individual reader. AI Reading uses only the role, goal, authority, and constraints you explicitly provide to determine what the idea means for you, what can be applied, what needs adapting, and what should not be copied blindly.
 
-## One reading journey, four independent stages
+## A complete report by default, or a four-stage guided journey
 
 ```text
 Find the question → Explain it clearly → Examine it from multiple angles → Put it to work
@@ -62,6 +65,8 @@ Find the question → Explain it clearly → Examine it from multiple angles →
 | **4. Put it to work** | Turn understanding into a usable result | Create one relevant checklist, knowledge card, training outline, decision aid, or channel-ready draft. |
 
 The stages work as one continuous journey, but each can also run independently. Ask for stage 2, 3, or 4 directly; AI Reading will establish only the minimum reliable foundation needed instead of forcing you to restart from stage 1.
+
+If you simply say “read this book,” the default is one complete report. If you say “guide me step by step” or “start with stage 1,” it switches to an interactive journey and waits for your own answer during Feynman learning.
 
 ## Why it saves time
 
@@ -89,6 +94,10 @@ For example, the claim “default options influence choices” raises different 
 ## Try these prompts
 
 ```text
+Use $ai-reading to read Thinking, Fast and Slow. Explain the whole book first, then audit which claims remain reliable.
+```
+
+```text
 Use $ai-reading to help me decide whether this book is worth reading.
 Run stage 1 only and tell me which three questions deserve the most attention.
 ```
@@ -108,7 +117,7 @@ Turn what I have learned into a 45-minute training outline for my team.
 Use only ideas that have already been clarified and examined.
 ```
 
-See [`examples/prompts.md`](examples/prompts.md) for more prompts and [`evals/ai-reading/test-cases.md`](evals/ai-reading/test-cases.md) for the public acceptance scenarios.
+See [`examples/prompts.md`](examples/prompts.md) for more prompts, [`evals/ai-reading/test-cases.md`](evals/ai-reading/test-cases.md) for public acceptance scenarios, and the [`report quality rubric`](evals/ai-reading/report-quality-rubric.md) for complete-report evaluation.
 
 ## Good fit
 
@@ -127,7 +136,7 @@ AI Reading does not require an uploaded copy of the entire book. A title, author
 |---|---:|---|
 | Book or concept | Yes | Provide a title, author, ISBN, cover, or concept. If the identity is ambiguous, AI Reading first asks for the author or edition. |
 | Reading goal | Recommended | Understand a concept, solve a problem, examine an argument, experience a literary work, or create an asset. |
-| Stage | No | Request stage 1–4 directly. If omitted, guided mode starts at stage 1. “Next stage” continues the current reading state. |
+| Stage | No | If omitted, AI Reading produces a complete reading report. You can also request stage 1–4 directly. “Next stage” continues the current reading state. |
 | Source material | No | Provide a lawful excerpt, table of contents, chapter, or key pages when available. |
 | Reader context | No | Provide a role, problem, action scope, or constraint. Sensitive traits are not inferred. |
 | Output controls | No | Choose concise, standard, or deep output; spoiler preference; target channel; or asset type. |
@@ -145,9 +154,10 @@ The absence of pasted book text is not itself a blocker. The workflow pauses onl
 <details>
 <summary><strong>Output modes and stage completion rules</strong></summary>
 
-- **Guided mode (default)**: proceed stage by stage and wait for the reader's answer during Feynman learning.
+- **Complete report mode (default for broad requests)**: provide a book-wide master framework as the first core knowledge point, three to five attached core modules with detailed book cases, three counterintuitive cases, a toolbox, three actions, a Feynman self-test, pressure test, credibility audit, and one concise real-world application.
+- **Guided mode**: proceed stage by stage when the user explicitly asks for guidance, and wait for the reader's answer during Feynman learning.
 - **Single-stage mode**: run the requested stage directly and establish only its minimum reliable foundation.
-- **Report mode**: provide research, self-test material, multi-angle examination, and asset recommendations while marking interactions that have not occurred.
+- **Focused report mode**: answer a specified question with research, self-test material, multi-angle examination, and asset recommendations while marking interactions that have not occurred.
 - **Length levels**: concise usually uses up to three core frameworks; standard uses three to five; deep adds disputes, counterexamples, and source comparison.
 
 For stage 3, simple methods usually use two perspectives, causal or generalized claims use three, and high-risk claims affecting individuals, organizations, institutions, and ethics use four. The perspectives must be meaningfully different rather than renamed versions of the same objection.
